@@ -1,7 +1,7 @@
 #include <stdio.h>
 /*
- *
  * main - print the input line using puts
+ *
  * return 0
  */
 int main(void)
