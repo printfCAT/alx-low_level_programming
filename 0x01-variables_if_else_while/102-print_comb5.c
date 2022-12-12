@@ -25,6 +25,8 @@ int main(void)
 						break;
 					putchar(',');
 					putchar(' ');
+					if ((a == '9') && (b == '8') && (c == '9') && (i == '9'))
+						break;
 				}
 			}
 		}
