@@ -1,28 +1,26 @@
 #include <stdio.h>
 /**
-* main - Entry point
+* main -Entry point
 *
 * Return: 0
 */
 int main(void)
 {
-	int a, b, c, i;
+	int i, c;
 
-	for (a = '0'; a <= '9'; a++)
+	for (i = '0'; i < 100; i++)
 	{
-		for (b = '0'; b <= '9'; b++)
+		for (c = '0'; c < 100; c++)
 		{
-			for (c = '0'; c <= '9'; c++)
+			if (i < c)
 			{
-				for (i = '1'; i <= '9'; i++)
+				putchar((i / 10) + 48);
+				putchar((i % 10) + 48);
+				putchar(' ');
+				putchar((c / 10) + 48);
+				putchar((c % 10) + 48);
+				if (i != 98 || c != 99)
 				{
-					putchar(a);
-					putchar(b);
-					putchar(' ');
-					putchar(c);
-					putchar(i);
-					if ((a == '9') && (b == '9') && (c == '9') && (i == '9'))
-						break;
 					putchar(',');
 					putchar(' ');
 				}
