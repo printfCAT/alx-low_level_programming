@@ -1,6 +1,6 @@
-#include <stdio.h>
+# include <stdio.h>
 /**
-* main - Entry point
+* main - printing the word _putchar
 *
 * Return: 0
 */
