@@ -12,7 +12,7 @@ void print_alphabet_x10(void)
 		{
 			_putchar(i);
 		}
-		while (j <= 9)
-		_putchar('\n');
 	}
+	while (j <= 9)
+	_putchar('\n');
 }
