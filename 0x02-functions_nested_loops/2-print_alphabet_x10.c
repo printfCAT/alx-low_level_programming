@@ -5,9 +5,9 @@
 void print_alphabet_x10(void)
 {
 	int i;
-	int j;
 
 	do {
+		int j;
 		for (i = 'a'; i <= 'z'; i++)
 		{
 			_putchar(i);
