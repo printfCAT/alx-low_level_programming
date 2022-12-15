@@ -2,22 +2,20 @@
 #include <stdio.h>
 /**
 * print_to_98 - prints all natural numbers up to 98
+* @n: starting number
 */
 void print_to_98(int n)
 {
-	int i;
-
-	if (i = '0'; i <= '9'; i++)
+	if (n > 98)
 	{
-		putchar(i);
-		putchar(',');
+		while (n >= 98)
+			printf("%d, ", n--);
 	}
-		int c;
-
-		if (c = '0'; c <= '8'; c++)
+	else
+	{
+		while (n <= 98)
 		{
-			putchar(i);
-			putchar(c);
-			putchar(',');
+			printf("%d, ", n++);
 		}
+	}
 }
