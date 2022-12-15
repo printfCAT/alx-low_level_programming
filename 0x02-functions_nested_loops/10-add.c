@@ -8,5 +8,5 @@ int add(int a, int b)
 {
 	int add = (a + b);
 	
-	_putchar(add);
+	_putchar(add + '0');
 }
