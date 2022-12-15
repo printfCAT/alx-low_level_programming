@@ -3,7 +3,7 @@
 /**
 * print_to_98 - prints all natural numbers up to 98
 */
-void print_to_98(int n);
+void print_to_98(int n)
 {
 	int i;
 
