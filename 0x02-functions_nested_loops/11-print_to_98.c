@@ -7,17 +7,17 @@ void print_to_98(int n)
 {
 	int i;
 
-	if (i = 48; i <= 57; i++)
+	if (i = '0'; i <= '9'; i++)
 	{
 		putchar(i);
 		putchar(',');
 	}
-		int n;
+		int c;
 
-		if (n = 48; n <= 56; n++)
+		if (c = '0'; c <= '8'; c++)
 		{
 			putchar(i);
-			putchar(n);
+			putchar(c);
 			putchar(',');
 		}
 }
