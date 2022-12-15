@@ -6,7 +6,7 @@
 */
 int add(int a, int b)
 {
-	int add = $(a + b);
+	int add = (a + b);
 	
 	_putchar(add);
 }
