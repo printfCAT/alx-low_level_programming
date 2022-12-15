@@ -5,7 +5,7 @@
 */
 void times_table(void)
 {
-	int s =0;
+	int s = 0;
 	int e = 9;
 	int count = 0;
 
@@ -42,4 +42,4 @@ void times_table(void)
 		s = 0;
 		count++;
 	}
-}	
+}
