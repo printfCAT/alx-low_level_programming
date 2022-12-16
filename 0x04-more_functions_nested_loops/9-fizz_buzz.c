@@ -22,6 +22,7 @@ int main(void)
 			printf("FizzBuzz ");
 			if (i == 100)
 			{
+				break;
 				printf("FizzBuzz";
 			}
 		}
