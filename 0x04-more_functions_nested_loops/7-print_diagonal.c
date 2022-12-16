@@ -5,7 +5,7 @@
 *
 * Return: 0
 */
-void print_diagonal(int n);
+void print_diagonal(int n)
 {
 	int i = 0, c = 0, a;
 
@@ -27,10 +27,10 @@ void print_diagonal(int n);
 				}
 				else
 					_putchar(' ');
-				c++
+				c++;
 			}
 			c = 0;
-			i++
+			i++;
 		}
 	}
 }
