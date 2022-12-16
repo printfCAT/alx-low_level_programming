@@ -1,4 +1,4 @@
-ginclude <stdio.h>
+#include <stdio.h>
 /**
 * main - prints a specified 1 to 100
 * Return: 0
