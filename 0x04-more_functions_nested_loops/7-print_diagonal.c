@@ -29,6 +29,8 @@ void print_diagonal(int n);
 					_putchar(' ');
 				c++
 			}
+			c = 0;
+			i++
 		}
 	}
 }
