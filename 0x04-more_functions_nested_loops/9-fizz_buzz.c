@@ -22,10 +22,10 @@ int main(void)
 		else if ((i % 3) == 0 && (i % 5) == 0)
 		{
 			printf("FizzBuzz");
-			if (i != 100)
-			{
-				printf(" ");
-			}
+		if (i != 100)
+		{
+			printf(" ");
+		}
 		}
 		else
 		{
@@ -34,6 +34,5 @@ int main(void)
 		}
 	}
 	printf("\n");
-
 	return (0);
 }
