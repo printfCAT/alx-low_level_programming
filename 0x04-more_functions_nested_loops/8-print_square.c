@@ -20,7 +20,7 @@ void print_square(int size)
 				_putchar('#');
 				c++;
 			}
-			count = 0;
+			c = 0;
 			_putchar('\n');
 		}
 	}
