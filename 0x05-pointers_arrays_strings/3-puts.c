@@ -7,6 +7,10 @@
 */
 void _puts(char *str)
 {
-	str = "Holberton!";
-	_puts(str);
+	while (*str)
+	{
+		_putchar(*str);
+		str++;
+	}
+	_putchar('\n');
 }
