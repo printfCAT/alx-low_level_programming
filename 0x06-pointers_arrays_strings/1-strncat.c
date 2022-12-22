@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
 * _strncat - concatenates 2 strings leaving null terminator
 * @dest: string 1
@@ -9,21 +10,15 @@
 */
 char *_strncat(char *dest, char *src, int n)
 {
-	int i = 0, len = 0;
+	int i = 0, j;
 
 	while (dest[i])
 	{
 		i++;
-		len++;
 	}
-	for (i = 0; src[i]; i++)
-	{
-		if (*src < n)
-			dest[len++] = src[i];
-		else
-		{
-			dest[len++ + 1] = src[i];
-		}
-	}
+	for (j = 0; j < n && src[j] != '\0'; j++)
+		dest[i++] = src[j];
+	dest[n + i] = '\0';
+
 	return (dest);
 }
