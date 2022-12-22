@@ -8,7 +8,6 @@
 */
 char *_strcat(char *dest, char *src)
 {
-	char *ptr;
 	int i = 0, c = 0, len;
 
 	while (*dest)
@@ -24,6 +23,5 @@ char *_strcat(char *dest, char *src)
 		c++;
 		src++;
 	}
-	*ptr = dest[c + 1] = src[i];
-	return (ptr);
+	return (dest);
 }
