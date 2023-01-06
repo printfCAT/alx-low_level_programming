@@ -15,7 +15,7 @@ int support(int a, int b)
 		else
 			return (-1);
 	}
-	return (support(a, b + 1));
+	return (support(b, a + 1));
 }
 
 /**
