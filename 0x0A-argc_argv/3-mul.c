@@ -9,10 +9,17 @@
 */
 int main(int argc, char *argv[])
 {
-	int i, multi = 1;
+	int i, n, multi;
 
-	for (i = 1; i < argc; i++)
-		multi *= atoi(argv[i]);
-	printf("%d\n)", multi);
+	if (argc != 3)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	i = atoi(argv[1]);
+	n = atoi(argv[2]);
+	multi = n * i;
+
+	printf("%d\n", multi);
 	return (0);
 }
