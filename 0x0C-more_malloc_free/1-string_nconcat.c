@@ -50,7 +50,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 	k = n;
-	size = _strlen(s1) + _strnlen(s2, n);
+	size = _strlen(s1) + _strnlen(s2, n) + 1;
 	c = malloc(sizeof(char) * size);
 	if (c == 0)
 		return (NULL);
