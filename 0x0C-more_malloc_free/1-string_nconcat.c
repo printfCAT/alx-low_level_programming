@@ -45,6 +45,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int size;
 	char *c;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	k = n;
 	size = _strlen(s1) + _strnlen(s2, n);
 	c = malloc(sizeof(char) * size);
