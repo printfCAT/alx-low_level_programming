@@ -26,7 +26,7 @@ int _strnlen(char *c, int n)
 {
 	int i = 0;
 
-	while (c[i] != '\0' && i <= n)
+	while (c[i] != '\0' && i < n)
 		i++;
 	return (i);
 }
