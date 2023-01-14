@@ -20,14 +20,16 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		new = malloc(new_size);
 		return (new);
 	}
-	new = malloc(new_size);
-	if (new == 0)
+	if (new_size == 0)
 	{
 		free(old);
 		return (NULL);
 	}
 	if (new_size == old_size)
 		return (old);
+	new = malloc(new_size);
+	if (new == 0)
+		return (NULL);
 	if (new_size > old_size)
 		return (new);
 	for (i = 0; i < old_size; i++)
