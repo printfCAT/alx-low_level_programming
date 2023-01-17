@@ -8,8 +8,6 @@
 */
 void print_dog(struct dog *d)
 {
-	if (d == NULL)
-		printf(" ");
 	if (d->name == NULL)
 		printf("Name: (nil)\nAge: %.6f\nOwner: %s\n", d->age, d->owner);
 	else if (d->age == 0)
