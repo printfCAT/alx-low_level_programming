@@ -11,21 +11,31 @@
 */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t new, *new_doggo;
+	dog_t *new_doggo;
 	unsigned long int i;
 
-	new_doggo = &new;
 	if (name == NULL || age < 0 || owner == NULL)
 		return (NULL);
 	new_doggo = malloc(sizeof(dog_t));
 	if (new_doggo == NULL)
+	{
+		free(new_doggo);
 		return (NULL);
+	}
 	new_doggo->name = malloc(strlen(name) + 1);
 	if (new_doggo->name == NULL)
+	{
+		free(new_doggo);
+		free(new_doggo->name);
 		return (NULL);
+	}
 	new_doggo->owner = malloc(strlen(owner) + 1);
 	if (new_doggo->owner == NULL)
+	{
+		free(new_doggo);
+		free(new_doggo->owner);
 		return (NULL);
+	}
 	for (i = 0; i < strlen(name); i++)
 		new_doggo->name[i] = name[i];
 	new_doggo->name[i] = '\0';
