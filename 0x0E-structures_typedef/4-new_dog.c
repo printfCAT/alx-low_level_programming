@@ -1,38 +1,6 @@
 #include "dog.h"
 #include <stdlib.h>
-/**
-* _strlen - a function to print the length of a string
-* @s: string to be supplied
-* Return: Always 0 (Success)
-*/
-
-int _strlen(char *s)
-{
-	int i = 0;
-
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
-
-/**
-* _strcpy - function copies string pointed to src and dest
-* @dest: Pointer parameter
-* @src: poiter parameter
-* Return: char
-*/
-
-char *_strcpy(char *dest, char *src)
-{
-	int i;
-
-	for (i = 0; *(src + i) != '\0'; i++)
-		dest[i] = *(src + i);
-	dest[i] = '\0';
-
-	return (dest);
-}
-
+#include <string.h>
 /**
 * new_dog - creates a new dog
 * @name: name of new dog
@@ -43,22 +11,27 @@ char *_strcpy(char *dest, char *src)
 */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t new_dog, *new_doggo;
+	dog_t new, *new_doggo;
 
-	new_doggo = &new_dog;
+	new_doggo = &new;
 	if (name == NULL || age < 0 || owner == NULL)
 		return (NULL);
 	new_doggo = malloc(sizeof(dog_t));
 	if (new_doggo == NULL)
 		return (NULL);
-	new_doggo->name = malloc(_strlen(name) + 1);
+	new_doggo->name = malloc(strlen(name) + 1);
 	if (new_doggo->name == NULL)
 		return (NULL);
-	new_doggo->owner = malloc(_strlen(owner) + 1);
+	new_doggo->owner = malloc(strlen(owner) + 1);
 	if (new_doggo->owner == NULL)
 		return (NULL);
-	new_doggo->name = _strcpy(new_doggo->name, name);
+	for (int = 0; i < strlen(name); i++)
+		new_doggo->age[i] = name[i];
+	new_doggo->name[i] = '\0';
 	new_doggo->age = age;
-	new_doggo->owner = _strcpy(new_doggo->owner, owner);
+	for (i = 0; i < strlen(owner); i++)
+		new_doggo->owner[i] = owner[i];
+	new_doggo->owner[i] = '\0';
+
 	return (new_doggo);
 }
