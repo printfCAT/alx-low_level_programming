@@ -34,7 +34,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (new_doggo->owner == NULL)
 	{
 		free(new_doggo->owner);
-		free(new_doggo);
 		return (NULL);
 	}
 	new_doggo->name = strcpy(new_doggo->name, name);
