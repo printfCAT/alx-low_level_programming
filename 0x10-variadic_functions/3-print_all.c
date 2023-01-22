@@ -21,7 +21,7 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 			case 'c':
-				ch = (char)va_arg(ap, int);
+				ch = va_arg(ap, int);
 				printf("%c", ch);
 				flag = 0;
 				break;
@@ -31,12 +31,12 @@ void print_all(const char * const format, ...)
 				flag = 0;
 				break;
 			case 'f':
-				a = (float)va_arg(ap, double);
+				a = va_arg(ap, double);
 				printf("%f", a);
 				flag = 0;
 				break;
 			case 's':
-				str = va_arg(ap, const char *);
+				str = va_arg(ap, char *);
 				if (str == NULL)
 				{
 					printf("(nil)");
