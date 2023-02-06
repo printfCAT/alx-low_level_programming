@@ -10,6 +10,8 @@ void print_binary(unsigned long int n)
 {
 	int i, temp = n;
 
+	if (n == 0)
+		printf("0");
 	for ( i = 0; (temp >>= 1) > 0; i++)
 		;
 	for (; i >= 0; i--)
