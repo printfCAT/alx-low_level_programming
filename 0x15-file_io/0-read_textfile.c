@@ -32,7 +32,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	wrt = fwrite(ch, sizeof(char), letters, stdout);
+	wrt = fwrite(ch, sizeof(char), rd, stdout);
 	if (wrt == 0 || wrt != rd)
 	{
 		free(ch);
