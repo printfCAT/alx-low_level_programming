@@ -10,14 +10,11 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	unsigned long int index = 0;
 
-	if (ht || key)
+	index = hash_djb2((unsigned char *)key) % ht->size;
+	if (ht->array[index])
 	{
-		index = hash_djb2((unsigned char *)key) % ht->size;
-		if (ht->array[index])
-		{
-			if (strcmp(ht->array[index]->key, key) == 0)
-				return (ht->array[index]->value);
-		}
+		if (strcmp(ht->array[index]->key, key) == 0)
+			return (ht->array[index]->value);
 	}
 	return (NULL);
 }
