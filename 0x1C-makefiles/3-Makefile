@@ -11,10 +11,8 @@ clean:
 	$(RM) -f *.sw? #* $(NAME)
 
 oclean:
-	$(RM) -f *.o
+	$(RM) -f $(OBJ)
 
-fclean:
-	$(RM) -f *.sw? #* $(NAME) *.o
+fclean: clean oclean
 
-re:
-	touch $(OBJ)
+re: fclean all
